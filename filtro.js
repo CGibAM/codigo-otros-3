@@ -8,7 +8,8 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
 
-const li = document.getElementsByName("lista-de-productos")
+// Se corrige la forma de acceder al elemento a getElement by Id
+const li = document.getElementById("lista-de-productos")
 const $i = document.querySelector('.input');
 
 for (let i = 0; i < productos.length; i++) {
@@ -28,8 +29,11 @@ for (let i = 0; i < productos.length; i++) {
   li.appendChild(d)
 }
 
-displayProductos(productos)
-const botonDeFiltro = document.querySelector("button");
+// Se comenta la funcion pues no existe
+// displayProductos(productos);
+
+// Se corrige el query selector y se agrega la clase a html
+const botonDeFiltro = document.querySelector("#button");
 
 botonDeFiltro.onclick = function() {
   while (li.firstChild) {
